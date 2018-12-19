@@ -43,4 +43,5 @@ proguard/
 
 /buildSdk
 
-
+!/test/*.apk
+/test/tinkerPatch

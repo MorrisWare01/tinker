@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TinkerPatch>
+    <issue id="property">
+        <ignoreWarning value="false" />
+        <isProtectedApp value="false" />
+        <useSign value="true" />
+        <sevenZipPath value="C:\\Program Files\\7-Zip\\7z.exe" />
+    </issue>
+    <issue id="dex">
+        <dexMode value="jar" />
+        <pattern value="classes*.dex" />
+        <pattern value="assets/secondary-dex-?.jar" />
+        <loader value="tinker.sample.android.app.BaseBuildInfo" />
+        <loader value="com.tencent.tinker.loader.*" />
+        <loader value="tinker.sample.android.SampleApplication" />
+        <ignoreChange value="tinker.sample.android.app.BaseBuildInfo" />
+    </issue>
+    <issue id="packageConfig">
+        <configField name="patchMessage" value="tinker is sample to use" />
+        <configField name="platform" value="all" />
+        <configField name="patchVersion" value="1.0" />
+    </issue>
+    <issue id="sign">
+        <path value="test/release.keystore" />
+        <keypass value="testres" />
+        <storepass value="testres" />
+        <alias value="testres" />
+    </issue>
+</TinkerPatch>
